@@ -1,0 +1,1 @@
+import type { CapacitorConfig } from '@capacitor/cli'; export default { appId: 'com.botmaster.user', appName: 'BOTMASTER', webDir: 'dist', server: { androidScheme: 'https' }, android: { backgroundColor: '#05070B' } } as CapacitorConfig;

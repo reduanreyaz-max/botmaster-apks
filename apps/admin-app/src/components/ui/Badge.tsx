@@ -1,0 +1,4 @@
+import React from 'react';
+type Variant = 'blue' | 'cyan' | 'green' | 'amber' | 'red' | 'slate';
+const STYLES: Record<Variant, string> = { blue: 'bg-blue-600/20 text-blue-300 border-blue-500/30', cyan: 'bg-sky-500/15 text-sky-300 border-sky-400/30', green: 'bg-emerald-500/15 text-emerald-300 border-emerald-500/30', amber: 'bg-amber-500/15 text-amber-300 border-amber-500/30', red: 'bg-rose-500/15 text-rose-300 border-rose-500/30', slate: 'bg-slate-800 text-slate-300 border-slate-700' };
+export const Badge: React.FC<{ variant?: Variant; children: React.ReactNode; className?: string }> = ({ variant = 'slate', children, className = '' }) => <span className={`inline-flex items-center gap-1 rounded-full border px-2.5 py-0.5 text-[11px] font-medium ${STYLES[variant]} ${className}`}>{children}</span>;
